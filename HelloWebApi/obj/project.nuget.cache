@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MHCpQ81f62E=",
+  "dgSpecHash": "Pg4dn3HlIkc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\berka\\Desktop\\C# .Net Lessons\\HelloWebApi\\HelloWebApi.csproj",
+  "projectFilePath": "C:\\Users\\berka\\Desktop\\dotNet Core Lessons\\HelloWebApi\\HelloWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\berka\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\berka\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
