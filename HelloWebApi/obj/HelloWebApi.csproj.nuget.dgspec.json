@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\berka\\Desktop\\dotNet Core Lessons\\HelloWebApi\\HelloWebApi.csproj": {}
+    "c:\\Users\\berka\\Desktop\\dotNet Core Lessons\\HelloWebApi\\HelloWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\berka\\Desktop\\dotNet Core Lessons\\HelloWebApi\\HelloWebApi.csproj": {
+    "c:\\Users\\berka\\Desktop\\dotNet Core Lessons\\HelloWebApi\\HelloWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\berka\\Desktop\\dotNet Core Lessons\\HelloWebApi\\HelloWebApi.csproj",
+        "projectUniqueName": "c:\\Users\\berka\\Desktop\\dotNet Core Lessons\\HelloWebApi\\HelloWebApi.csproj",
         "projectName": "HelloWebApi",
-        "projectPath": "C:\\Users\\berka\\Desktop\\dotNet Core Lessons\\HelloWebApi\\HelloWebApi.csproj",
+        "projectPath": "c:\\Users\\berka\\Desktop\\dotNet Core Lessons\\HelloWebApi\\HelloWebApi.csproj",
         "packagesPath": "C:\\Users\\berka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\berka\\Desktop\\dotNet Core Lessons\\HelloWebApi\\obj\\",
+        "outputPath": "c:\\Users\\berka\\Desktop\\dotNet Core Lessons\\HelloWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
