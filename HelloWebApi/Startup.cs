@@ -50,6 +50,36 @@ namespace HelloWebApi
 
             app.UseAuthorization();
 
+            //app.Run();
+
+            //app.Run(async context => Console.WriteLine("Middleware 1 çalıştı"));
+            //app.Run(async context => Console.WriteLine("Middleware 2 çalıştı"));
+
+            //app.Use();
+
+            app.Use(async (context, next) =>
+            {
+                Console.WriteLine("Middleware 1 Başladı");
+                await next.Invoke();
+                Console.WriteLine("Middleware 1 Sonlandırılıyor");
+            });
+
+
+            app.Use(async (context, next) =>
+            {
+                Console.WriteLine("Middleware 2 Başladı");
+                await next.Invoke();
+                Console.WriteLine("Middleware 2 Sonlandırılıyor");
+            });
+
+            app.Use(async (context, next) =>
+            {
+                Console.WriteLine("Middleware 3 Başladı");
+                await next.Invoke();
+                Console.WriteLine("Middleware 3 Sonlandırılıyor");
+            });
+
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
