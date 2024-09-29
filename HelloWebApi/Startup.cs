@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -57,6 +58,7 @@ namespace HelloWebApi
 
             //app.Use();
 
+            /*             
             app.Use(async (context, next) =>
             {
                 Console.WriteLine("Middleware 1 Başladı");
@@ -77,6 +79,34 @@ namespace HelloWebApi
                 Console.WriteLine("Middleware 3 Başladı");
                 await next.Invoke();
                 Console.WriteLine("Middleware 3 Sonlandırılıyor");
+            }); 
+            */
+
+
+            app.Use(async (context, next) =>
+            {
+                Console.WriteLine("Use Middleware Tetiklendi");
+                await next.Invoke();
+
+            });
+
+            //app.Map()
+            app.Map("/example", internalApp =>
+                internalApp.Run(async context =>
+                {
+                    Console.WriteLine("/example middleware tetiklendi");
+                    await context.Response.WriteAsync("/example middleware tetiklendi");
+                }));
+
+            //appMapWhen()
+            app.MapWhen(x => x.Request.Method == "GET", internalApp =>
+            {
+                internalApp.Run(async context =>
+                {
+                    Console.WriteLine("Get Metodu olduğunda çalışan middleware tetiklendi");
+                    await context.Response.WriteAsync("Get Metodu çağırıldığında çalışacak middleware");
+
+                });
             });
 
 
